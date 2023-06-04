@@ -1,0 +1,195 @@
+<div>
+  {{#with program}}
+  <main>
+    <section>
+      <h1>Program list</h1>
+      <b>Excursion</b>
+      <ul>
+        {{#with excursion}}
+        <li>
+          <p><b>Name:</b> {{name}}</p>
+        <li>
+          <b>Location:</b>
+        </li>
+        <ul>
+          {{#with location}}
+          <li>
+            <p>City: {{city}}</p>
+          </li>
+          <li>
+            <p>Country: {{country}}</p>
+          </li>
+          {{/with}}
+        </ul>
+        </li>
+        <li>
+          <p><b>Date:</b> {{date}}</p>
+        </li>
+        <li><b>Program:</b></li>
+        <ul>
+          {{#with program.[0]}}
+          <li>
+            <p>Name: {{name}}</p>
+          </li>
+          <li>
+            <p>Type: {{type}}</p>
+          </li>
+          <li>
+            <p>Duration: {{duration}}</p>
+          </li>
+          {{/with}}
+          <b>Details:</b>
+          <ul>
+            <p><b>Museum:</b></p>
+          </ul>
+          {{#each program}}
+          <ul>
+            {{#with details}}
+            {{#with museum}}
+            <ul>
+              <li>
+                <p>Museum: {{name}}</p>
+              </li>
+              <p><b>Location:</b></p>
+              <ul>
+                {{#with location}}
+                <li>
+                  <p>Address: {{address}}</p>
+                </li>
+                <li>
+                  <p>City: {{city}}</p>
+                </li>
+                <li>
+                  <p>Country: {{country}}</p>
+                </li>
+                {{/with}}
+              </ul>
+              <p><b>Exhibits:</b></p>
+              <ul>
+                {{#with exhibits.[0]}}
+                <li>
+                  <p>Name: {{name}}</p>
+                </li>
+                <li>
+                  <p>Artist: {{artist}}</p>
+                </li>
+                <li>
+                  <p>Description: {{description}}</p>
+                </li>
+                <li>
+                  <p>Audio guide: {{#if audio_guide}}Present{{/if}}</p>
+                </li>
+                {{/with}}
+                <br>
+                {{#with exhibits.[1]}}
+                <li>
+                  <p>Name: {{name}}</p>
+                </li>
+                <li>
+                  <p>Artist: {{#unless artist includeZero=true}}There is no{{/unless}}</p>
+                </li>
+                <li>
+                  <p>Description: {{description}}</p>
+                </li>
+                <li>
+                  <p>Audio guide: {{#if audio_guide}}Present{{/if}}</p>
+                </li>
+                {{/with}}
+              </ul>
+            </ul>
+            <ul>
+              {{#with ../guide}}
+              <p><b>Guide:</b></p>
+              <ul>
+                <li>
+                  <p>Name: {{name}}</p>
+                </li>
+                <li>
+                  <p>Language: {{language}}</p>
+                </li>
+                <li>
+                  <p>Rating: {{rating}}</p>
+                </li>
+              </ul>
+              {{/with}}
+            </ul>
+            {{/with}}
+            {{/with}}
+          </ul>
+          {{/each}}
+        </ul>
+        <li>
+          <p><b>Program: </b></p>
+        </li>
+        <ul>
+          {{#with program.[1]}}
+          <li>
+            <p>Name: {{name}}</p>
+          </li>
+          <li>
+            <p>Type: {{type}}</p>
+          </li>
+          <li>
+            <p>Duration: {{duration}}</p>
+          </li>
+          <p><b>Details:</b></p>
+          <ul>
+            {{#with details}}
+            <p><b>Venue:</b></p>
+            <ul>
+              {{#with venue}}
+              <li>
+                <p>Name: {{name}}</p>
+              </li>
+              <p><b>Location:</b></p>
+              <ul>
+                {{#with location}}
+                <li>
+                  <p>Address: {{address}}</p>
+                </li>
+                <li>
+                  <p>City: {{ciry}}</p>
+                </li>
+                <li>
+                  <p>Country: {{country}}</p>
+                </li>
+                {{/with}}
+              </ul>
+              {{/with}}
+              <p><b>Performers:</b></p>
+              <ul>
+                {{#each performers}}
+                <li>
+                  <p>Name: {{name}}</p>
+                </li>
+                <li>
+                  <p>Type: {{type}}</p>
+                </li>
+                {{/each}}
+              </ul>
+              <p><b>Guide:</b></p>
+              <ul>
+                {{#with guide}}
+                <li>
+                  <p>Name: {{name}}</p>
+                </li>
+                <li>
+                  <p>Language: {{language}}</p>
+                </li>
+                <li>
+                  <p>Rating: {{rating}}</p>
+                </li>
+                {{/with}}
+              </ul>
+            </ul>
+            {{/with}}
+          </ul>
+          {{/with}}
+        </ul>
+        {{/with}}
+      </ul>
+    </section>
+  </main>
+  {{/with}}
+</div>
+{{!-- {{#unless point includeZero=true}} (Не вивчаємо) {{/unless}} --}}
