@@ -1,0 +1,325 @@
+<div>
+  <section>
+    <p><b>{{name}}</b></p>
+    <p><b>Users:</b></p>
+    <ul>
+      {{#with users.[0]}}
+      <li>
+        <p><b>Id: </b>{{id}}</p>
+      </li>
+      <li>
+        <p><b>Name: </b>{{name}}</p>
+      </li>
+      <li>
+        <p><b>Gender: </b>{{gender}}</p>
+      </li>
+      <li>
+        <p><b>Age: </b>{{age}}</p>
+      </li>
+      <p><b>Friends:</b></p>
+      <ul>
+        {{#with friends.[0]}}
+        <li>
+          <p><b>Id: </b>{{id}}</p>
+        </li>
+        <li>
+          <p><b>Name: </b>{{name}}</p>
+        </li>
+        <li>
+          <p><b>Gender: </b>{{gender}}</p>
+        </li>
+        <li>
+          <p><b>Age: </b>{{age}}</p>
+        </li>
+        <p><b>Mutual friends:</b></p>
+        <ul>
+          {{#with mutual_friends.[0]}}
+          <li>
+            <p><b>Id: </b>{{id}}</p>
+          </li>
+          <li>
+            <p><b>Name: </b>{{name}}</p>
+          </li>
+          <li>
+            <p><b>Gender: </b>{{gender}}</p>
+          </li>
+          <li>
+            <p><b>Age: </b>{{age}}</p>
+          </li>
+          {{/with}}
+        </ul>
+        {{/with}}
+      </ul>
+      <ul>
+        {{#with friends.[1]}}
+        <li>
+          <p><b>Id: </b>{{id}}</p>
+        </li>
+        <li>
+          <p><b>Name: </b>{{name}}</p>
+        </li>
+        <li>
+          <p><b>Gender: </b>{{gender}}</p>
+        </li>
+        <li>
+          <p><b>Age: </b>{{age}}</p>
+        </li>
+        <p><b>Mutual friends:</b></p>
+        <ul>
+          {{#with mutual_friends.[0]}}
+          <li>
+            <p><b>Id: </b>{{id}}</p>
+          </li>
+          <li>
+            <p><b>Name: </b>{{name}}</p>
+          </li>
+          <li>
+            <p><b>Gender: </b>{{gender}}</p>
+          </li>
+          <li>
+            <p><b>Age: </b>{{age}}</p>
+          </li>
+          {{/with}}
+        </ul>
+        {{/with}}
+      </ul>
+      <p><b>Groups:</b></p>
+      <ul>
+        {{#with groups.[0]}}
+        <li>
+          <p><b>Id: </b>{{id}}</p>
+        </li>
+        <li>
+          <p><b>Name: </b>{{name}}</p>
+        </li>
+        <li>
+          <p><b>Description: </b>{{description}}</p>
+        </li>
+        <p><b>Members:</b></p>
+        <ul>
+          {{#with members.[0]}}
+          <li>
+            <p><b>Id: </b>{{id}}</p>
+          </li>
+          <li>
+            <p><b>Name: </b>{{name}}</p>
+          </li>
+          <li>
+            <p><b>Gender: </b>{{gender}}</p>
+          </li>
+          <li>
+            <p><b>Age: </b>{{age}}</p>
+          </li>
+          {{/with}}
+        </ul>
+        {{/with}}
+      </ul>
+      <ul>
+        {{#with groups.[1]}}
+        <li>
+          <p><b>Id: </b>{{id}}</p>
+        </li>
+        <li>
+          <p><b>Name: </b>{{name}}</p>
+        </li>
+        <li>
+          <p><b>Description: </b>{{description}}</p>
+        </li>
+        <p><b>Members:</b></p>
+        <ul>
+          {{#with members.[0]}}
+          <li>
+            <p><b>Id: </b>{{id}}</p>
+          </li>
+          <li>
+            <p><b>Name: </b>{{name}}</p>
+          </li>
+          <li>
+            <p><b>Gender: </b>{{gender}}</p>
+          </li>
+          <li>
+            <p><b>Age: </b>{{age}}</p>
+          </li>
+          {{/with}}
+        </ul>
+        <br>
+        <ul>
+          {{#with members.[1]}}
+          <li>
+            <p><b>Id: </b>{{id}}</p>
+          </li>
+          <li>
+            <p><b>Name: </b>{{name}}</p>
+          </li>
+          <li>
+            <p><b>Gender: </b>{{gender}}</p>
+          </li>
+          <li>
+            <p><b>Age: </b>{{age}}</p>
+          </li>
+          {{/with}}
+        </ul>
+        {{/with}}
+      </ul>
+      {{/with}}
+      {{#with users.[1]}}
+      <li>
+        <p><b>Id: </b>{{id}}</p>
+      </li>
+      <li>
+        <p><b>Name: </b>{{name}}</p>
+      </li>
+      <li>
+        <p><b>Gender: </b>{{gender}}</p>
+      </li>
+      <li>
+        <p><b>Age: </b>{{age}}</p>
+      </li>
+      <ul>
+        <p><b>Friends:</b></p>
+        <ul>
+          {{#with friends.[0]}}
+          <li>
+            <p><b>Id: </b>{{id}}</p>
+          </li>
+          <li>
+            <p><b>Name: </b>{{name}}</p>
+          </li>
+          <li>
+            <p><b>Gender: </b>{{gender}}</p>
+          </li>
+          <li>
+            <p><b>Age: </b>{{age}}</p>
+          </li>
+          <p><b>Mutual friends:</b></p>
+          <ul>
+            {{#with mutual_friends.[0]}}
+            <li>
+              <p><b>Id: </b>{{id}}</p>
+            </li>
+            <li>
+              <p><b>Name: </b>{{name}}</p>
+            </li>
+            <li>
+              <p><b>Gender: </b>{{gender}}</p>
+            </li>
+            <li>
+              <p><b>Age: </b>{{age}}</p>
+            </li>
+            {{/with}}
+          </ul>
+          <br>
+          <ul>
+            {{#with mutual_friends.[1]}}
+            <li>
+              <p><b>Id: </b>{{id}}</p>
+            </li>
+            <li>
+              <p><b>Name: </b>{{name}}</p>
+            </li>
+            <li>
+              <p><b>Gender: </b>{{gender}}</p>
+            </li>
+            <li>
+              <p><b>Age: </b>{{age}}</p>
+            </li>
+            <br>
+            <p><b>Mutual friends:</b></p>
+            <ul>
+              {{#with mutual_friends.[0]}}
+              <li>
+                <p><b>Id: </b>{{id}}</p>
+              </li>
+              <li>
+                <p><b>Name: </b>{{name}}</p>
+              </li>
+              <li>
+                <p><b>Gender: </b>{{gender}}</p>
+              </li>
+              <li>
+                <p><b>Age: </b>{{age}}</p>
+              </li>
+              {{/with}}
+            </ul>
+            {{/with}}
+          </ul>
+          <p><b>Mutual friends:</b></p>
+          <ul>
+            {{#with groups.[0]}}
+            <li>
+              <p><b>Id: </b>{{id}}</p>
+            </li>
+            <li>
+              <p><b>Name: </b>{{name}}</p>
+            </li>
+            <li>
+              <p><b>Description: </b>{{description}}</p>
+            </li>
+            <ul>
+              {{#with members.[0]}}
+              <li>
+                <p><b>Id: </b>{{id}}</p>
+              </li>
+              <li>
+                <p><b>Name: </b>{{name}}</p>
+              </li>
+              <li>
+                <p><b>Gender: </b>{{gender}}</p>
+              </li>
+              <li>
+                <p><b>Age: </b>{{age}}</p>
+              </li>
+              {{/with}}
+            </ul>
+            {{/with}}
+            {{#with groups.[1]}}
+            <li>
+              <p><b>Id: </b>{{id}}</p>
+            </li>
+            <li>
+              <p><b>Name: </b>{{name}}</p>
+            </li>
+            <li>
+              <p><b>Description: </b>{{description}}</p>
+            </li>
+            <ul>
+              {{#with members.[0]}}
+              <li>
+                <p><b>Id: </b>{{id}}</p>
+              </li>
+              <li>
+                <p><b>Name: </b>{{name}}</p>
+              </li>
+              <li>
+                <p><b>Gender: </b>{{gender}}</p>
+              </li>
+              <li>
+                <p><b>Age: </b>{{age}}</p>
+              </li>
+              {{/with}}
+            </ul>
+            <br>
+            <ul>
+              {{#with members.[1]}}
+              <li>
+                <p><b>Id: </b>{{id}}</p>
+              </li>
+              <li>
+                <p><b>Name: </b>{{name}}</p>
+              </li>
+              <li>
+                <p><b>Gender: </b>{{gender}}</p>
+              </li>
+              <li>
+                <p><b>Age: </b>{{age}}</p>
+              </li>
+              {{/with}}
+            </ul>
+            {{/with}}
+          </ul>
+          {{/with}}
+        </ul>
+        {{/with}}
+      </ul>
+  </section>
+</div>
