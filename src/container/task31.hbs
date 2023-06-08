@@ -1,0 +1,50 @@
+<main>
+  <section>
+    <nav class="row g-2">
+      <div>
+        {{#with navigation}}
+        {{#each links}}
+        <a href="{{href}}" class="btn btn-link">{{text}}</a>
+        {{/each}}
+        {{#with button}}
+        <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+        {{/with}}
+        {{/with}}
+      </div>
+    </nav>
+  </section>
+  <hr>
+  <section>
+    {{#with header}}
+    <h1>{{title}}</h1>
+    <p>{{description}}</p>
+    {{#with button}}
+    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+    {{/with}}
+    {{/with}}
+  </section>
+  <hr>
+  <section class="col-12">
+    {{#with city}}
+    <h2>{{title}}</h2>
+    <div class="row">
+      {{#each cards}}
+      <div class="card">
+        <div class="col-5">
+          {{#with picture}}
+          <img class="card-img-top" src="{{src}}" alt="{{alt}}">
+          {{/with}}
+          <div class="card-body">
+            <h5>{{title}}</h5>
+            <p>{{description}}</p>
+            {{#with button}}
+            <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+            {{/with}}
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{/with}}
+  </section>
+</main>
