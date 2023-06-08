@@ -106,7 +106,6 @@ router.get('/skills', function (req, res) {
     footer,
   })
 })
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -144,7 +143,6 @@ router.get('/summary', function (req, res) {
     footer,
   })
 })
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -207,7 +205,6 @@ router.get('/education', function (req, res) {
     footer,
   })
 })
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -275,7 +272,6 @@ router.get('/work', function (req, res) {
     footer,
   })
 })
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -377,7 +373,6 @@ router.get('/person', function (req, res) {
     },
   })
 })
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -564,11 +559,6 @@ router.get('/program', function (req, res) {
 })
 // ================================================================
 
-mac
-router.get('/mac', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-car
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -664,6 +654,9 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
+  })
+})
+// ================================================================
 
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -793,6 +786,7 @@ router.get('/web', function (req, res) {
     },
   })
 })
+// ================================================================
 
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -873,8 +867,9 @@ router.get('/js', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-master
+// ================================================================
 
+router.get('/mac', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: 'basic',
@@ -959,24 +954,16 @@ master
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-// ================================================================
-
-mac
 
 router.get('/bootstrap', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
     layout: 'bootstrap',
-
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
 
-facebook
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1134,10 +1121,16 @@ router.get('/facebook', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
 
-master
-master
+router.get('/bootstrap1', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap1', {
+    layout: 'bootstrap',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 // Підключаємо роутер до бек-енду
 module.exports = router
