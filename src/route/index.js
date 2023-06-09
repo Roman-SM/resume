@@ -1265,7 +1265,6 @@ router.get('/bootstrap1', function (req, res) {
     layout: 'bootstrap',
   })
   //                  ↑↑ сюди вводимо JSON дані
-
 })
 // ================================================================
 
@@ -1341,7 +1340,7 @@ router.get('/task31', function (req, res) {
           },
           title: 'Tokyo',
           description:
-            "Tokyo, Japan's bustling capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
+            "Tokyo, Japan’s bustling capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
           button: {
             text: 'Reac',
             href: 'https://github.com/',
@@ -1523,8 +1522,11 @@ router.get('/task31', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 // ================================================================
 
+// Підключаємо роутер до бек-енду
+module.exports = router
 
 // Підключаємо роутер до бек-енду
 module.exports = router
