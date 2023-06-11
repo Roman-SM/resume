@@ -5,27 +5,27 @@
 
 <div>
   {{#with main}}
-    <main>
-      <section>
+  <main>
+    <section class="mb-3">
       {{> title data=summary.title big=true}}
-        <div>
-            <p>
-            {{summary.text}}
-            </p>
-        </div>
-      </section>
+      <div>
+        <p>
+          {{summary.text}}
+        </p>
+      </div>
+    </section>
 
-      {{#with experience}}
-          <section>
-          {{> title data=title}}
-            <div>
-                <p>
-                {{text}}
-                </p>
-            </div>
-          </section>
-      {{/with}}
-    </main>
+    {{#with experience}}
+    <section>
+      {{> title data=title}}
+      <div>
+        <p>
+          {{text}}
+        </p>
+      </div>
+    </section>
+    {{/with}}
+  </main>
   {{/with}}
 </div>
 
