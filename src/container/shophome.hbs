@@ -1,0 +1,136 @@
+<main class="p-5">
+  <section class="mb-5">
+    <div class="col-12">
+      <div class="row">
+        <div class="card p-3">
+          <div class="nav">
+            {{#with navigation}}
+            {{#each links}}
+            <div class="col-1">
+              <a href="{{href}}" class="nav-link m-0 p-0 text-center">{{text}}</a>
+            </div>
+            {{/each}}
+            <div class="col-1">
+              <div class="nav-link p-0 disabled">Disabled</div>
+            </div>
+          </div>
+          {{/with}}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mb-5">
+    {{#with newsBlock}}
+    <h3 class="text-center">{{title}}</h3>
+    <div class="col-12">
+      <div class="row g-2">
+        {{#each cards}}
+        <div class="col-3">
+          <div class="card text-bg-dark">
+            <div class="card-header">
+              {{title}}
+              {{#if isTop}}
+              <button class="btn btn-success rounded-pill">Нова</button>
+              {{/if}}
+              {{#if isNew}}
+              <button class="btn btn-danger rounded-pill">Топ</button>
+              {{/if}}
+            </div>
+            <div class="card-body">
+              <div>{{description}}</div>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/with}}
+  </section>
+  <hr>
+  <section class="py-5">
+    <div class="col-12">
+      {{#with goodsBlock}}
+      <div class="row g-2">
+        <div class="nav nav-tabs">
+          {{#each tabs}}
+          <div class="nav-item">
+            {{#if isActive}}
+            <div class="nav-link active">{{text}}</div>
+            {{else isDisabled}}
+            <div class="nav-link disabled">{{text}}</div>
+            {{else}}
+            <div class="nav-link">{{text}}</div>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="pt-5">
+        <div class="row g-2">
+          {{#each cards}}
+          <div class="col-4">
+            <div class="card">
+              <img class="card-img-top" src="{{image}}">
+              <div class="card-body">
+                <h4 class="card-title">
+                  {{title}}
+                  {{#if isHot}}
+                  <button class="btn btn-warning rounded-pill text-uppercase">hot!</button>
+                  {{/if}}
+                  {{#if isNew}}
+                  <button class="btn btn-primary rounded-pill">Нове</button>
+                  {{/if}}
+                </h4>
+                <p>{{description}}</p>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      {{/with}}
+    </div>
+  </section>
+  <hr>
+  <section class="py-5">
+    <div class="col-12">
+      {{#with subscribe}}
+      <div class="card col-12 text-bg-dark p-3">
+        <h2>{{header}}</h2>
+        <p class="gy-2">{{description}}</p>
+        <a href="{{buttons.[0].link}}" class="btn btn-primary col-2 my-1">{{buttons.[0].text}}</a>
+        <a href="{{buttons.[1].link}}" class="btn btn-primary col-2 my-1">{{buttons.[1].text}}</a>
+      </div>
+      {{/with}}
+    </div>
+  </section>
+  <hr>
+  <section class="py-5">
+    <div class="card text-bg-success">
+      <div class="card-body text-center">
+        {{#with service}}
+        <h2 class="card-title">{{title}}</h2>
+        <p>{{description}}</p>
+        {{#each buttons}}
+        <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+        {{/each}}
+        {{/with}}
+      </div>
+    </div>
+  </section>
+  <hr>
+  <footer class="py-5">
+    <div class="col-12">
+      <div class="row">
+        {{#each footer}}
+        <div class="col-2">
+          <a href="{{[0].link}}" class="nav nav-link p-0 pb-2 active">{{[0].text}}</a>
+          <a href="{{[1].link}}" class="nav nav-link p-0 pb-2 active">{{[1].text}}</a>
+          <a href="{{[2].link}}" class="nav nav-link p-0 pb-2 active">{{[2].text}}</a>
+          <a href="{{[3].link}}" class="nav nav-link p-0 pb-2 disabled">{{[3].text}}</a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </footer>
+</main>
