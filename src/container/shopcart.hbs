@@ -1,0 +1,155 @@
+<main class="p-5">
+  <div class="col-12">
+    <div class="row">
+      <div class="card p-3">
+        <div class="nav">
+          {{#with navigation}}
+          {{#each links}}
+          <div class="nav-item p-1">
+            {{#if @last}}
+            <a href="{{href}}" class="nav-link m-0 p-0 text-center disabled">{{text}}</a>
+            {{else}}
+            <a href="{{href}}" class="nav-link m-0 p-0 text-center">{{text}}</a>
+            {{/if}}
+          </div>
+          {{/each}}
+          {{/with}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    {{#with header}}
+    <h1>{{title}}</h1>
+    {{#with button}}
+    <a href={{link}} class="btn btn-outline-dark my-2">{{text}}</a>
+    {{/with}}
+    {{/with}}
+  </div>
+
+  <hr>
+
+  <section class="row my-5">
+    <div class="col-12">
+      {{#each goodsBlock}}
+      <div class="card my-3">
+        <div class="card-body p-2">
+          <div class="row">
+            <div class="col-2">
+              <img src={{image}}>
+            </div>
+            <div class="col-5 ms-0">
+              <div class="card-title">{{name}}</div>
+              <div>{{description}}</div>
+            </div>
+            <div class="col-2 mt-4">
+              <div>{{price.title}}: <br> {{price.value}}</div>
+            </div>
+            <div class="col-1 mt-5">
+              {{amount}}
+            </div>
+            <div class="col-2">
+              {{#each buttons}}
+              {{#if isPrimary}}
+              <button class="btn btn-primary mt-2 mb-4">{{text}}</button>
+              {{else isDanger}}
+              <button class="btn btn-outline-danger">{{text}}</button>
+              {{/if}}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <hr>
+
+  <sectoin>
+    <div class="my-5">
+      {{#with total}}
+      <h4>{{title}}</h4>
+      <div class="display-6">{{amount}}</div>
+      <p>{{delivery}}</p>
+      <div>
+        {{#each buttons}}
+        {{#if isSuccess}}
+        <div class="mb-3">
+          <a href="{{link}}" class="btn btn-success">{{text}}</a>
+        </div>
+        {{else isOutline}}
+        <div>
+          <a href="{{link}}" class="btn btn-outline-success">{{text}}</a>
+        </div>
+        {{/if}}
+        {{/each}}
+      </div>
+      {{/with}}
+    </div>
+  </sectoin>
+
+  <hr>
+
+  <section>
+    <div class="my-5">
+      {{#with goodsOtherBlock}}
+      <h3 class="text-center">{{title}}</h3>
+      <div class="row">
+        {{#each cards}}
+        <div class="col-4">
+          <div class="card">
+            <img class="card-img-top" src="{{image}}">
+            <div class="card-body">
+              <h4 class="card-title">
+                {{title}}
+                {{#if isHot}}
+                <button class="btn btn-warning rounded-pill text-uppercase">hot!</button>
+                {{/if}}
+                {{#if isNew}}
+                <button class="btn btn-primary rounded-pill">Нове</button>
+                {{/if}}
+              </h4>
+              <p>{{description}}</p>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/with}}
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="card p-2 text-bg-dark my-5">
+    {{#with subscribe}}
+    <h2>{{header}}</h2>
+    <p>{{description}}</p>
+    {{#each buttons}}
+    <div class="pb-2">
+      <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+    </div>
+    {{/each}}
+    {{/with}}
+  </section>
+
+  <hr>
+
+  <footer>
+    <footer class="py-5">
+      <div class="col-12">
+        <div class="row">
+          {{#each footer}}
+          <div class="col-2">
+            <a href="{{[0].link}}" class="nav nav-link p-0 pb-2 active">{{[0].text}}</a>
+            <a href="{{[1].link}}" class="nav nav-link p-0 pb-2 active">{{[1].text}}</a>
+            <a href="{{[2].link}}" class="nav nav-link p-0 pb-2 active">{{[2].text}}</a>
+            <a href="{{[3].link}}" class="nav nav-link p-0 pb-2 disabled">{{[3].text}}</a>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </footer>
+  </footer>
+</main>
