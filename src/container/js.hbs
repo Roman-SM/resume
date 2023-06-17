@@ -1,128 +1,103 @@
-<div>
-  <section>
-    <b>Name: {{name}}</b>
+<section class="p-5">
+  <b>Name: {{name}}</b>
+  <ul>
+    <p>Description: {{description}}</p>
+    <p><b>History: </b></p>
     <ul>
-      <p>Description: {{description}}</p>
-      <p><b>History: </b></p>
+      <li>
+        <p>Year: {{history.year}}</p>
+      </li>
+      <li>
+        <p>Founder: {{history.founder}}</p>
+      </li>
+    </ul>
+    <p><b>Types: </b></p>
+    <ul>
+      {{#each types}}
+      <li>
+        <p>{{this}}</p>
+      </li>
+      {{/each}}
+    </ul>
+    <p><b>Syntax: </b></p>
+    <ul>
+      <p><b>Variables:</b></p>
       <ul>
-        {{#with history}}
-        <li>
-          <p>Year: {{year}}</p>
-        </li>
-        <li>
-          <p>Founder: {{founder}}</p>
-        </li>
-        {{/with}}
-      </ul>
-      <p><b>Types: </b></p>
-      <ul>
-        {{#each types}}
+        {{#each syntax.variables}}
         <li>
           <p>{{this}}</p>
         </li>
         {{/each}}
       </ul>
-      <p><b>Syntax: </b></p>
+      <p><b>Functions:</b></p>
       <ul>
-        {{#with syntax}}
-        <p><b>Variables:</b></p>
-        <ul>
-          {{#each variables}}
-          <li>
-            <p>{{this}}</p>
-          </li>
-          {{/each}}
-        </ul>
-        <p><b>Functions:</b></p>
-        <ul>
-          {{#each functions}}
-          <li>
-            <p>{{this}}</p>
-          </li>
-          {{/each}}
-        </ul>
-        <p><b>Conditionals:</b></p>
-        <ul>
-          {{#each conditionals}}
-          <li>
-            <p>{{this}}</p>
-          </li>
-          {{/each}}
-        </ul>
-        <p><b>Loops:</b></p>
-        <ul>
-          {{#each loops}}
-          <li>
-            <p>{{this}}</p>
-          </li>
-          {{/each}}
-        </ul>
-        <p><b>Classes:</b></p>
-        <ul>
-          {{#each classes}}
-          <li>
-            <p>{{this}}</p>
-          </li>
-          {{/each}}
-        </ul>
-        {{/with}}
-      </ul>
-      <p><b>Features: </b></p>
-      <ul>
-        {{#each features}}
+        {{#each syntax.functions}}
         <li>
-          {{this}}
+          <p>{{this}}</p>
         </li>
         {{/each}}
       </ul>
-      <p><b>Libraries: </b></p>
+      <p><b>Conditionals:</b></p>
       <ul>
-        {{#each libraries}}
+        {{#each syntax.conditionals}}
         <li>
-          {{this}}
+          <p>{{this}}</p>
         </li>
         {{/each}}
       </ul>
-      <p><b>Tools: </b></p>
+      <p><b>Loops:</b></p>
       <ul>
-        {{#each tools}}
+        {{#each syntax.loops}}
         <li>
-          {{this}}
+          <p>{{this}}</p>
         </li>
         {{/each}}
       </ul>
-      <p><b>Сommunity: </b></p>
+      <p><b>Classes:</b></p>
       <ul>
-        {{#with community}}
+        {{#each syntax.classes}}
         <li>
-          <p>Name: {{[0].name}}</p>
+          <p>{{this}}</p>
         </li>
-        <li>
-          <p>Type: {{[0].type}}</p>
-        </li>
-        <br>
-        <li>
-          <p>Name: {{[1].name}}</p>
-        </li>
-        <li>
-          <p>Type: {{[1].type}}</p>
-        </li>
-        <br>
-        <li>
-          <p>Name: {{[2].name}}</p>
-        </li>
-        <li>
-          <p>Type: {{[2].type}}</p>
-        </li>
-        <br>
-        <li>
-          <p>Name: {{[3].name}}</p>
-        </li>
-        <li>
-          <p>Type: {{[3].type}}</p>
-        </li>
-        {{/with}}
+        {{/each}}
       </ul>
     </ul>
-  </section>
-</div>
+    <p><b>Features: </b></p>
+    <ul>
+      {{#each features}}
+      <li>
+        <p>{{this}}</p>
+      </li>
+      {{/each}}
+    </ul>
+    <p><b>Libraries: </b></p>
+    <ul>
+      {{#each libraries}}
+      <li>
+        <p>{{this}}</p>
+      </li>
+      {{/each}}
+    </ul>
+    <p><b>Tools: </b></p>
+    <ul>
+      {{#each tools}}
+      <li>
+        <p>{{this}}</p>
+      </li>
+      {{/each}}
+    </ul>
+    <p><b>Сommunity: </b></p>
+    <ul>
+      {{#each community}}
+      <li>
+        Name: {{name}}
+      </li>
+      <div class="pb-3">
+        <li>
+          Type: {{type}}
+        </li>
+      </div>
+      {{/each}}
+    </ul>
+  </ul>
+</section>

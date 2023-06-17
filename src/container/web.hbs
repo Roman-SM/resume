@@ -1,100 +1,98 @@
-<div>
+<main class="p-5">
   {{#with web}}
-  <main>
-    <section>
-      <h1>Web list</h1>
+  <section>
+    <h1>Web list</h1>
+    <ul>
+      {{#each languages}}
+      <p><b>Languages:</b></p>
       <ul>
-        {{#each languages}}
-        <p><b>Languages:</b></p>
+        <li>
+          <p><b>Name:</b> {{name}}</p>
+        </li>
+        <li>
+          <p><b>Version:</b> {{version}}</p>
+        </li>
+        <li>
+          <p><b>Description:</b> {{description}}</p>
+        </li>
         <ul>
-          <li>
-            <p><b>Name:</b> {{name}}</p>
-          </li>
-          <li>
-            <p><b>Version:</b> {{version}}</p>
-          </li>
-          <li>
-            <p><b>Description:</b> {{description}}</p>
-          </li>
+          {{#each elements}}
+          <p><b>Elements:</b></p>
           <ul>
-            {{#each elements}}
-            <p><b>Elements:</b></p>
+            <li>
+              <p><b>Name: </b>{{name}}</p>
+            </li>
+            <li>
+              <p><b>Description: </b>{{description}}</p>
+            </li>
+            <p><b>Attributes:</b></p>
             <ul>
+              {{#each attributes}}
               <li>
                 <p><b>Name: </b>{{name}}</p>
               </li>
               <li>
                 <p><b>Description: </b>{{description}}</p>
               </li>
-              <p><b>Attributes:</b></p>
-              <ul>
-                {{#each attributes}}
-                <li>
-                  <p><b>Name: </b>{{name}}</p>
-                </li>
-                <li>
-                  <p><b>Description: </b>{{description}}</p>
-                </li>
-                {{/each}}
-              </ul>
+              {{/each}}
             </ul>
+          </ul>
+          {{/each}}
+        </ul>
+      </ul>
+      <ul>
+        {{#each properties}}
+        <p><b>Properties:</b></p>
+        <ul>
+          <li>
+            <p><b>Name: </b>{{name}}</p>
+          </li>
+          <li>
+            <p><b>Description: </b>{{description}}</p>
+          </li>
+          <p><b>Values:</b></p>
+          <ul>
+            {{#each values}}
+            <li>
+              <p><b>Value: </b>{{value}}</p>
+            </li>
+            <li>
+              <p><b>Description: </b>{{description}}</p>
+            </li>
             {{/each}}
           </ul>
         </ul>
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each functions}}
+        <p><b>Functions:</b></p>
         <ul>
-          {{#each properties}}
-          <p><b>Properties:</b></p>
+          <li>
+            <p><b>Name: </b>{{name}}</p>
+          </li>
+          <li>
+            <p><b>Description: </b>{{description}}</p>
+          </li>
+          <p><b>Parameters:</b></p>
           <ul>
+            {{#each parameters}}
             <li>
               <p><b>Name: </b>{{name}}</p>
             </li>
             <li>
-              <p><b>Description: </b>{{description}}</p>
-            </li>
-            <p><b>Values:</b></p>
-            <ul>
-              {{#each values}}
-              <li>
-                <p><b>Value: </b>{{value}}</p>
-              </li>
-              <li>
-                <p><b>Description: </b>{{description}}</p>
-              </li>
-              {{/each}}
-            </ul>
-          </ul>
-          {{/each}}
-        </ul>
-        <ul>
-          {{#each functions}}
-          <p><b>Functions:</b></p>
-          <ul>
-            <li>
-              <p><b>Name: </b>{{name}}</p>
+              <p><b>Type: </b>{{type}}</p>
             </li>
             <li>
               <p><b>Description: </b>{{description}}</p>
             </li>
-            <p><b>Parameters:</b></p>
-            <ul>
-              {{#each parameters}}
-              <li>
-                <p><b>Name: </b>{{name}}</p>
-              </li>
-              <li>
-                <p><b>Type: </b>{{type}}</p>
-              </li>
-              <li>
-                <p><b>Description: </b>{{description}}</p>
-              </li>
-              {{/each}}
-            </ul>
+            {{/each}}
           </ul>
-          {{/each}}
         </ul>
         {{/each}}
       </ul>
-    </section>
-  </main>
+      {{/each}}
+    </ul>
+  </section>
   {{/with}}
-</div>
+</main>

@@ -40,7 +40,9 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 // ================================================================
@@ -958,6 +960,7 @@ router.get('/mac', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+// ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bootstrap', function (req, res) {
@@ -1069,55 +1072,54 @@ router.get('/facebook', function (req, res) {
                 gender: 'Male',
                 age: 33,
               },
+            ],
+
+            id: 19,
+            name: 'Erica Wong',
+            gender: 'Female',
+            age: 29,
+            mutual_friends: [
               {
-                id: 19,
-                name: 'Erica Wong',
-                gender: 'Female',
-                age: 29,
-                mutual_friends: [
-                  {
-                    id: 20,
-                    name: 'Alex Lee',
-                    gender: 'Male',
-                    age: 31,
-                  },
-                ],
+                id: 20,
+                name: 'Alex Lee',
+                gender: 'Male',
+                age: 31,
               },
             ],
-            groups: [
+          },
+        ],
+        groups: [
+          {
+            id: 3,
+            name: 'Travel Addicts',
+            description:
+              'A group for people who love to travel and explore new places',
+            members: [
               {
-                id: 3,
-                name: 'Travel Addicts',
-                description:
-                  'A group for people who love to travel and explore new places',
-                members: [
-                  {
-                    id: 22,
-                    name: 'Jackie Chen',
-                    gender: 'Female',
-                    age: 26,
-                  },
-                ],
+                id: 22,
+                name: 'Jackie Chen',
+                gender: 'Female',
+                age: 26,
+              },
+            ],
+          },
+          {
+            id: 4,
+            name: 'Pet Lovers',
+            description:
+              'A group for people who love their furry friends',
+            members: [
+              {
+                id: 16,
+                name: 'Amy Lee',
+                gender: 'Female',
+                age: 30,
               },
               {
-                id: 4,
-                name: 'Pet Lovers',
-                description:
-                  'A group for people who love their furry friends',
-                members: [
-                  {
-                    id: 16,
-                    name: 'Amy Lee',
-                    gender: 'Female',
-                    age: 30,
-                  },
-                  {
-                    id: 25,
-                    name: 'John Smith',
-                    gender: 'Male',
-                    age: 33,
-                  },
-                ],
+                id: 25,
+                name: 'John Smith',
+                gender: 'Male',
+                age: 33,
               },
             ],
           },
@@ -1774,7 +1776,6 @@ router.get('/task31', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -2063,7 +2064,6 @@ router.get('/shophome', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
