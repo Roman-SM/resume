@@ -40,7 +40,9 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 // ================================================================
@@ -374,6 +376,7 @@ router.get('/person', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
@@ -471,6 +474,7 @@ router.get('/bio', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
@@ -557,6 +561,7 @@ router.get('/program', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -656,6 +661,7 @@ router.get('/car', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -786,6 +792,7 @@ router.get('/web', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -867,6 +874,7 @@ router.get('/js', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/mac', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
@@ -952,7 +960,9 @@ router.get('/mac', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+// ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bootstrap', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
@@ -962,6 +972,7 @@ router.get('/bootstrap', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1061,55 +1072,54 @@ router.get('/facebook', function (req, res) {
                 gender: 'Male',
                 age: 33,
               },
+            ],
+
+            id: 19,
+            name: 'Erica Wong',
+            gender: 'Female',
+            age: 29,
+            mutual_friends: [
               {
-                id: 19,
-                name: 'Erica Wong',
-                gender: 'Female',
-                age: 29,
-                mutual_friends: [
-                  {
-                    id: 20,
-                    name: 'Alex Lee',
-                    gender: 'Male',
-                    age: 31,
-                  },
-                ],
+                id: 20,
+                name: 'Alex Lee',
+                gender: 'Male',
+                age: 31,
               },
             ],
-            groups: [
+          },
+        ],
+        groups: [
+          {
+            id: 3,
+            name: 'Travel Addicts',
+            description:
+              'A group for people who love to travel and explore new places',
+            members: [
               {
-                id: 3,
-                name: 'Travel Addicts',
-                description:
-                  'A group for people who love to travel and explore new places',
-                members: [
-                  {
-                    id: 22,
-                    name: 'Jackie Chen',
-                    gender: 'Female',
-                    age: 26,
-                  },
-                ],
+                id: 22,
+                name: 'Jackie Chen',
+                gender: 'Female',
+                age: 26,
+              },
+            ],
+          },
+          {
+            id: 4,
+            name: 'Pet Lovers',
+            description:
+              'A group for people who love their furry friends',
+            members: [
+              {
+                id: 16,
+                name: 'Amy Lee',
+                gender: 'Female',
+                age: 30,
               },
               {
-                id: 4,
-                name: 'Pet Lovers',
-                description:
-                  'A group for people who love their furry friends',
-                members: [
-                  {
-                    id: 16,
-                    name: 'Amy Lee',
-                    gender: 'Female',
-                    age: 30,
-                  },
-                  {
-                    id: 25,
-                    name: 'John Smith',
-                    gender: 'Male',
-                    age: 33,
-                  },
-                ],
+                id: 25,
+                name: 'John Smith',
+                gender: 'Male',
+                age: 33,
               },
             ],
           },
@@ -1121,6 +1131,7 @@ router.get('/facebook', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1192,6 +1203,7 @@ router.get('/task21', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task22', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1254,6 +1266,7 @@ router.get('/task22', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bootstrap1', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1265,20 +1278,13 @@ router.get('/bootstrap1', function (req, res) {
 })
 // ================================================================
 
-
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcart', {
     layout: 'shop',
-
-router.get('/task31', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('task31', {
-
     navigation: {
       links: [
         {
@@ -1294,7 +1300,6 @@ router.get('/task31', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
-
     },
 
     header: {
@@ -1310,7 +1315,7 @@ router.get('/task31', function (req, res) {
         image: 'https://picsum.photos/110/110',
         name: 'Samsung Galaxy S21 Ultra ',
         description:
-          'Екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
+          'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
         price: { title: 'Ціна', value: '25 000 ₴' },
         amount: '1 шт.',
         buttons: [
@@ -1322,7 +1327,7 @@ router.get('/task31', function (req, res) {
         image: 'https://picsum.photos/110/110',
         name: 'Ноутбук Dell XPS 13',
         description:
-          'Екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
+          'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
         price: { title: 'Ціна', value: '25 000 ₴' },
 
         amount: '1 шт.',
@@ -1335,7 +1340,7 @@ router.get('/task31', function (req, res) {
         image: 'https://picsum.photos/110/110',
         name: 'Телевізор LG OLED CX',
         description:
-          'Екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
+          'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
         price: { title: 'Ціна', value: '25 000 ₴' },
 
         amount: '1 шт.',
@@ -1373,7 +1378,172 @@ router.get('/task31', function (req, res) {
           text: 'Офрмити кредит',
           link: 'https://www.youtube.com/',
           isOutline: true,
+        },
+      ],
+    },
 
+    goodsOtherBlock: {
+      title: 'See other products',
+      cards: [
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'iPhone 13',
+          description:
+            'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
+          isHot: false,
+          idNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'MacBook Pro',
+          description:
+            "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
+          isHot: true,
+          idNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'AirPods Pro',
+          description:
+            "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
+          isHot: false,
+          idNew: false,
+        },
+      ],
+    },
+
+    subscribe: {
+      header: 'Unlock Premium Content',
+      description:
+        'Subscribe to access exclusive content and features.',
+      buttons: [
+        {
+          text: 'Register Now',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Buy Subscription',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
+
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+// ================================================================
+
+//              ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/task31', function (req, res) {
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('task31', {
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
       button: {
         text: 'Lets start',
         href: 'https://nodejs.org/en/',
@@ -1608,7 +1778,11 @@ router.get('/task31', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shophome', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shophome', {
     layout: 'shop',
     navigation: {
@@ -1690,14 +1864,9 @@ router.get('/shophome', function (req, res) {
             'Amazon announces an expansion of its grocery delivery service, with plans to offer free delivery to Prime members on orders over $35 and to expand its selection of fresh and organic produce.',
           isTop: false,
           isNew: true,
-
         },
       ],
     },
-
-
-    goodsOtherBlock: {
-      title: 'See other products',
 
     goodsBlock: {
       tabs: [
@@ -1722,7 +1891,6 @@ router.get('/shophome', function (req, res) {
           text: 'Toys & Games',
         },
       ],
-
       cards: [
         {
           image: 'https://picsum.photos/400/200',
@@ -1730,11 +1898,7 @@ router.get('/shophome', function (req, res) {
           description:
             'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
           isHot: false,
-
-          idNew: false,
-
           isNew: false,
-
         },
         {
           image: 'https://picsum.photos/400/200',
@@ -1742,9 +1906,6 @@ router.get('/shophome', function (req, res) {
           description:
             "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
           isHot: true,
-
-          idNew: false,
-
           isNew: false,
         },
         {
@@ -1753,11 +1914,6 @@ router.get('/shophome', function (req, res) {
           description:
             "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
           isHot: false,
-          idNew: false,
-        },
-      ],
-    },
-
           isNew: false,
         },
         {
@@ -1910,6 +2066,7 @@ router.get('/shophome', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shoporder', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -2275,6 +2432,7 @@ router.get('/shoporder', function (req, res) {
 })
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopreview', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -2463,7 +2621,6 @@ router.get('/shopreview', function (req, res) {
         },
       ],
     },
-
 
     footer: [
       [
