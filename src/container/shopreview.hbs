@@ -59,22 +59,9 @@
 
 			<hr>
 
-			<div class="my-5">
-				{{#with feedbackBlock}}
-				<h2 class="mb-5">{{title}}</h2>
-				{{#each buttons}}
-				{{#if isWarning}}
-				<a href="{{link}}" class="btn btn-warning">{{text}}</a>
-				{{else isSuccess}}
-				<a href="{{link}}" class="btn btn-success">{{text}}</a>
-				{{else isDanger}}
-				<a href="{{link}}" class="btn btn-danger">{{text}}</a>
-				{{/if}}
-				{{/each}}
-				{{/with}}
-			</div>
+			
 		</section>
-
+			
 		<section class="col-4">
 			{{#with goodsInfo}}
 			<div class="card">
@@ -112,6 +99,20 @@
 			</div>
 			{{/with}}
 		</section>
+		<div class="my-5">
+			{{#with feedbackBlock}}
+			<h2 class="mb-5">{{title}}</h2>
+			{{#each buttons}}
+			{{#if isWarning}}
+			<a href="{{link}}" class="btn btn-warning">{{text}}</a>
+			{{else isSuccess}}
+			<a href="{{link}}" class="btn btn-success">{{text}}</a>
+			{{else isDanger}}
+			<a href="{{link}}" class="btn btn-danger">{{text}}</a>
+			{{/if}}
+			{{/each}}
+			{{/with}}
+		</div>
 		{{/with}}
 	</section>
 

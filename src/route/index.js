@@ -1312,7 +1312,7 @@ router.get('/shopcart', function (req, res) {
 
     goodsBlock: [
       {
-        image: 'https://picsum.photos/110/110',
+        image: 'https://picsum.photos/85/128',
         name: 'Samsung Galaxy S21 Ultra ',
         description:
           'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
@@ -1324,7 +1324,7 @@ router.get('/shopcart', function (req, res) {
         ],
       },
       {
-        image: 'https://picsum.photos/110/110',
+        image: 'https://picsum.photos/85/128',
         name: 'Ноутбук Dell XPS 13',
         description:
           'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
@@ -1337,7 +1337,7 @@ router.get('/shopcart', function (req, res) {
         ],
       },
       {
-        image: 'https://picsum.photos/110/110',
+        image: 'https://picsum.photos/85/128',
         name: 'Телевізор LG OLED CX',
         description:
           'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
@@ -1350,7 +1350,7 @@ router.get('/shopcart', function (req, res) {
         ],
       },
       {
-        image: 'https://picsum.photos/110/110',
+        image: 'https://picsum.photos/85/128',
         name: 'Навушники Sony WH-1000XM4',
         description:
           'Bluetooth 5.0, активне шумозаглушення, 30 годин автономної роботи, сенсорне управління, вага 254 г.',

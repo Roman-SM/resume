@@ -6,12 +6,12 @@
           <div class="nav">
             {{#with navigation}}
             {{#each links}}
-            <div class="col-1">
+            <div class="col-2">
               <a href="{{href}}" class="nav-link m-0 p-0 text-center">{{text}}</a>
             </div>
             {{/each}}
-            <div class="col-1">
-              <div class="nav-link p-0 disabled">Disabled</div>
+            <div class="col-2">
+              <div class="nav-link p-0 text-center disabled">Disabled</div>
             </div>
           </div>
           {{/with}}
@@ -30,10 +30,10 @@
             <div class="card-header">
               {{title}}
               {{#if isTop}}
-              <button class="btn btn-success rounded-pill">Нова</button>
+              <button class="btn btn-success rounded-pill">New</button>
               {{/if}}
               {{#if isNew}}
-              <button class="btn btn-danger rounded-pill">Топ</button>
+              <button class="btn btn-danger rounded-pill">Top</button>
               {{/if}}
             </div>
             <div class="card-body">
@@ -75,10 +75,10 @@
                 <h4 class="card-title">
                   {{title}}
                   {{#if isHot}}
-                  <button class="btn btn-warning rounded-pill text-uppercase">hot!</button>
+                  <button class="btn btn-warning rounded-pill text-uppercase">Hot!</button>
                   {{/if}}
                   {{#if isNew}}
-                  <button class="btn btn-primary rounded-pill">Нове</button>
+                  <button class="btn btn-primary rounded-pill">New</button>
                   {{/if}}
                 </h4>
                 <p>{{description}}</p>
