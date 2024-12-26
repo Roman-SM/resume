@@ -15,11 +15,11 @@
         {{#if point includeZero=true}}({{point}}){{/if}}
         {{#if isTop}} (TOP) {{/if}}
 
-        {{#unless point includeZero=true}} (Не вивчаємо) {{/unless}}
+        {{#unless point includeZero=true}} (We do not study) {{/unless}}
 
         {{#unless point}}
         {{#if point includeZero=true}}
-        (Зараз вивчаємо)
+        (We are studying now)
         {{/if}}
         {{/unless}}
       </li>
@@ -32,7 +32,7 @@
       {{#each hobbies}}
       <li>
         {{name}}
-        {{#if isMain}}(favourite){{/if}}
+        {{#if isMain}}(Favourite){{/if}}
       </li>
       {{/each}}
     </ol>

@@ -261,20 +261,7 @@
 
 			<hr>
 
-			<footer class="py-5">
-				<div class="col-12">
-					<div class="row">
-						{{#each footer}}
-						<div class="col-2">
-							<a href="{{[0].link}}" class="nav nav-link p-0 pb-2 active">{{[0].text}}</a>
-							<a href="{{[1].link}}" class="nav nav-link p-0 pb-2 active">{{[1].text}}</a>
-							<a href="{{[2].link}}" class="nav nav-link p-0 pb-2 active">{{[2].text}}</a>
-							<a href="{{[3].link}}" class="nav nav-link p-0 pb-2 disabled">{{[3].text}}</a>
-						</div>
-						{{/each}}
-					</div>
-				</div>
-			</footer>
+			
 		</section>
 		<section class="col-4">
 			<div class="card">
@@ -323,5 +310,19 @@
 				{{/with}}
 			</div>
 		</section>
+		<footer class="py-5">
+			<div class="col-12">
+				<div class="row">
+					{{#each footer}}
+					<div class="col-2">
+						<a href="{{[0].link}}" class="nav nav-link p-0 pb-2 active">{{[0].text}}</a>
+						<a href="{{[1].link}}" class="nav nav-link p-0 pb-2 active">{{[1].text}}</a>
+						<a href="{{[2].link}}" class="nav nav-link p-0 pb-2 active">{{[2].text}}</a>
+						<a href="{{[3].link}}" class="nav nav-link p-0 pb-2 disabled">{{[3].text}}</a>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</footer>
 	</div>
 </main>

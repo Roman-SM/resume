@@ -38,17 +38,17 @@
             <div class="col-2">
               <img src={{image}}>
             </div>
-            <div class="col-5 ms-0">
+            <div class="col-5 ms-0 p-0">
               <div class="card-title">{{name}}</div>
               <div>{{description}}</div>
             </div>
             <div class="col-2 mt-4">
               <div>{{price.title}}: <br> {{price.value}}</div>
             </div>
-            <div class="col-1 mt-5">
+            <div class="col-1 mt-5 p-0">
               {{amount}}
             </div>
-            <div class="col-2">
+            <div class="col-2 p-0">
               {{#each buttons}}
               {{#if isPrimary}}
               <button class="btn btn-primary mt-2 mb-4">{{text}}</button>
@@ -107,7 +107,7 @@
                 <button class="btn btn-warning rounded-pill text-uppercase">hot!</button>
                 {{/if}}
                 {{#if isNew}}
-                <button class="btn btn-primary rounded-pill">Нове</button>
+                <button class="btn btn-primary rounded-pill">New</button>
                 {{/if}}
               </h4>
               <p>{{description}}</p>
